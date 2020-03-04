@@ -32,6 +32,7 @@ namespace MassTransitBugRepro
 
 			await bus.StartAsync();
 
+			// Error happens here
 			await bus.Publish(new MyMessage { Value = "Hello, World." });
 
 			Console.ReadLine();
